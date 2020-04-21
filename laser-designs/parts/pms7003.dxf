@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-02_MARKING
+03_PMS_OUTLINE
   9
 $CELTYPE
   6
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-62.36964437500695
+41.25352779227192
  22
-12.73077790286623
+7.591988876520948
  13
 0
  23
@@ -1143,9 +1143,9 @@ AcDbViewportTableRecord
  37
 0
  40
-94.69911983886463
+83.28858385124452
  41
-1.889150943396226
+1.993297587131367
  42
 50
  43
@@ -2299,7 +2299,7 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-03_OUTLINE
+03_PMS_OUTLINE
  70
     0
  62
@@ -2335,7 +2335,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-Standard
+standard
  70
     0
  40
@@ -2349,7 +2349,7 @@ Standard
  42
 1
   3
-txt
+standard
   4
 
   0
@@ -4051,7 +4051,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4075,7 +4075,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4099,7 +4099,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4123,7 +4123,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4147,7 +4147,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4171,7 +4171,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4195,7 +4195,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4219,7 +4219,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4243,7 +4243,7 @@ POINT
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4263,7 +4263,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4287,7 +4287,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4311,7 +4311,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4335,7 +4335,7 @@ LINE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4359,7 +4359,7 @@ INSERT
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4399,7 +4399,7 @@ INSERT
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4439,7 +4439,7 @@ INSERT
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4479,7 +4479,7 @@ INSERT
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4519,7 +4519,7 @@ INSERT
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4559,7 +4559,7 @@ INSERT
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4599,7 +4599,7 @@ A0
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4639,7 +4639,7 @@ A1
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4679,7 +4679,7 @@ A2
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4719,7 +4719,7 @@ A3
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4759,7 +4759,7 @@ A4
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4799,7 +4799,7 @@ A5
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4839,7 +4839,7 @@ A6
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4879,7 +4879,7 @@ A7
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4919,7 +4919,7 @@ A8
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4959,7 +4959,7 @@ A9
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -4999,7 +4999,7 @@ AA
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5039,7 +5039,7 @@ AB
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5079,7 +5079,7 @@ AC
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5119,7 +5119,7 @@ AD
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5159,7 +5159,7 @@ AE
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5183,7 +5183,7 @@ AF
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5207,7 +5207,7 @@ B0
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5231,7 +5231,7 @@ B1
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5255,7 +5255,7 @@ B2
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5279,7 +5279,7 @@ B3
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5303,7 +5303,7 @@ B4
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5327,7 +5327,7 @@ B5
 100
 AcDbEntity
   8
-03_OUTLINE
+03_PMS_OUTLINE
   6
 ByLayer
  62
@@ -5529,7 +5529,7 @@ AcDbMText
   1
 AIR IN
   7
-
+standard
 210
 0
 220
@@ -5575,7 +5575,7 @@ AcDbMText
   1
 AIR OUT
   7
-
+standard
 210
 0
 220
@@ -5876,6 +5876,52 @@ AcDbLine
 36.7
  21
 -32.25
+  0
+MTEXT
+  5
+C8
+100
+AcDbEntity
+  8
+02_MARKING
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbMText
+ 10
+5
+ 20
+-23.85
+ 30
+0
+ 40
+6
+ 41
+33.3333320613208
+ 71
+    8
+ 72
+    1
+  1
+PMS7003
+  7
+standard
+210
+0
+220
+0
+230
+1
+ 50
+270
+ 73
+    2
+ 44
+1
   0
 ENDSEC
   0
