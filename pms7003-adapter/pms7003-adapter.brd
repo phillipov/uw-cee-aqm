@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -176,6 +176,8 @@
 <text x="4.08" y="10.022" size="1.016" layer="26" font="vector" ratio="20" rot="SMR270" align="center-left">RX</text>
 <text x="6.62" y="10.022" size="1.016" layer="26" font="vector" ratio="20" rot="SMR270" align="center-left">GND</text>
 <text x="9.16" y="10.022" size="1.016" layer="26" font="vector" ratio="20" rot="SMR270" align="center-left">5V</text>
+<text x="5.35" y="3.25" size="1.524" layer="21" font="vector" ratio="20" align="center">PMS7003
+Adapter</text>
 </plain>
 <libraries>
 <library name="aqm-parts">
@@ -471,26 +473,30 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="RX">
 <contactref element="J2" pad="3"/>
 <contactref element="J1" pad="8"/>
-<wire x1="4.08" y1="5.025" x2="4.08" y2="11.8" width="0" layer="19" extent="16-16"/>
+<wire x1="4.08" y1="5.025" x2="4.08" y2="11.8" width="0.3048" layer="16"/>
 </signal>
 <signal name="TX">
 <contactref element="J2" pad="4"/>
 <contactref element="J1" pad="10"/>
-<wire x1="2.81" y1="5.025" x2="1.54" y2="11.8" width="0" layer="19" extent="16-16"/>
+<wire x1="2.81" y1="5.025" x2="2.81" y2="7.35" width="0.3048" layer="16"/>
+<wire x1="1.54" y1="8.62" x2="1.54" y2="11.8" width="0.3048" layer="16"/>
+<wire x1="2.81" y1="7.35" x2="1.54" y2="8.62" width="0.3048" layer="16"/>
 </signal>
 <signal name="GND" airwireshidden="yes">
 <contactref element="J2" pad="2"/>
 <contactref element="J1" pad="4"/>
 <contactref element="J1" pad="3"/>
-<wire x1="6.62" y1="5.025" x2="6.62" y2="11.8" width="0" layer="19" extent="16-16"/>
-<wire x1="6.62" y1="1.475" x2="6.62" y2="5.025" width="0" layer="19" extent="16-16"/>
+<wire x1="6.62" y1="1.475" x2="6.62" y2="5.025" width="0.3048" layer="16"/>
+<wire x1="6.62" y1="5.025" x2="6.62" y2="11.8" width="0.3048" layer="16"/>
 </signal>
 <signal name="5V" airwireshidden="yes">
 <contactref element="J2" pad="1"/>
 <contactref element="J1" pad="1"/>
 <contactref element="J1" pad="2"/>
-<wire x1="7.89" y1="5.025" x2="9.16" y2="11.8" width="0" layer="19" extent="16-16"/>
-<wire x1="7.89" y1="1.475" x2="7.89" y2="5.025" width="0" layer="19" extent="16-16"/>
+<wire x1="7.89" y1="1.475" x2="7.89" y2="5.025" width="0.3048" layer="16"/>
+<wire x1="7.89" y1="5.025" x2="7.89" y2="7.382" width="0.3048" layer="16"/>
+<wire x1="9.16" y1="8.652" x2="9.16" y2="11.8" width="0.3048" layer="16"/>
+<wire x1="7.89" y1="7.382" x2="9.16" y2="8.652" width="0.3048" layer="16"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -503,6 +509,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </board>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
