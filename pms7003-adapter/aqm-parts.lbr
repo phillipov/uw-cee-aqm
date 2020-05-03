@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -123,6 +123,111 @@
 <smd name="9" x="-1.775" y="-2.54" dx="2.05" dy="0.76" layer="1"/>
 <smd name="10" x="1.775" y="-2.54" dx="2.05" dy="0.76" layer="1"/>
 </package>
+<package name="ESP8266-ESP12">
+<wire x1="0" y1="0" x2="16.2" y2="0" width="0.127" layer="21"/>
+<wire x1="16.2" y1="0" x2="16.2" y2="24.1" width="0.127" layer="21"/>
+<wire x1="16.2" y1="24.1" x2="0" y2="24.1" width="0.127" layer="21"/>
+<wire x1="0" y1="24.1" x2="0" y2="0" width="0.127" layer="21"/>
+<smd name="16" x="0" y="2" dx="2" dy="1.2" layer="1"/>
+<smd name="15" x="0" y="4" dx="2" dy="1.2" layer="1"/>
+<smd name="14" x="0" y="6" dx="2" dy="1.2" layer="1"/>
+<smd name="13" x="0" y="8" dx="2" dy="1.2" layer="1"/>
+<smd name="12" x="0" y="10" dx="2" dy="1.2" layer="1"/>
+<smd name="11" x="0" y="12" dx="2" dy="1.2" layer="1"/>
+<smd name="10" x="0" y="14" dx="2" dy="1.2" layer="1"/>
+<smd name="9" x="0" y="16" dx="2" dy="1.2" layer="1"/>
+<smd name="1" x="16.2" y="2" dx="2" dy="1.2" layer="1"/>
+<smd name="2" x="16.2" y="4" dx="2" dy="1.2" layer="1"/>
+<smd name="3" x="16.2" y="6" dx="2" dy="1.2" layer="1"/>
+<smd name="4" x="16.2" y="8" dx="2" dy="1.2" layer="1"/>
+<smd name="5" x="16.2" y="10" dx="2" dy="1.2" layer="1"/>
+<smd name="6" x="16.2" y="12" dx="2" dy="1.2" layer="1"/>
+<smd name="7" x="16.2" y="14" dx="2" dy="1.2" layer="1"/>
+<smd name="8" x="16.2" y="16" dx="2" dy="1.2" layer="1"/>
+<text x="5" y="2" size="1.27" layer="21" rot="R90">&gt;NAME</text>
+<text x="5" y="20" size="1.27" layer="21">ESP-12</text>
+</package>
+<package name="SOT230P700X180-4N">
+<description>&lt;b&gt;SOT223_2&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-3.05" y="2.3" dx="1.9" dy="0.9" layer="1"/>
+<smd name="2" x="-3.05" y="0" dx="1.9" dy="0.9" layer="1"/>
+<smd name="3" x="-3.05" y="-2.3" dx="1.9" dy="0.9" layer="1"/>
+<smd name="4" x="3.05" y="0" dx="3.2" dy="1.9" layer="1" rot="R90"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-4.25" y1="3.6" x2="4.25" y2="3.6" width="0.05" layer="51"/>
+<wire x1="4.25" y1="3.6" x2="4.25" y2="-3.6" width="0.05" layer="51"/>
+<wire x1="4.25" y1="-3.6" x2="-4.25" y2="-3.6" width="0.05" layer="51"/>
+<wire x1="-4.25" y1="-3.6" x2="-4.25" y2="3.6" width="0.05" layer="51"/>
+<wire x1="-1.75" y1="3.25" x2="1.75" y2="3.25" width="0.1" layer="51"/>
+<wire x1="1.75" y1="3.25" x2="1.75" y2="-3.25" width="0.1" layer="51"/>
+<wire x1="1.75" y1="-3.25" x2="-1.75" y2="-3.25" width="0.1" layer="51"/>
+<wire x1="-1.75" y1="-3.25" x2="-1.75" y2="3.25" width="0.1" layer="51"/>
+<wire x1="-1.75" y1="0.95" x2="0.55" y2="3.25" width="0.1" layer="51"/>
+<wire x1="-1.75" y1="3.25" x2="1.75" y2="3.25" width="0.2" layer="21"/>
+<wire x1="1.75" y1="3.25" x2="1.75" y2="-3.25" width="0.2" layer="21"/>
+<wire x1="1.75" y1="-3.25" x2="-1.75" y2="-3.25" width="0.2" layer="21"/>
+<wire x1="-1.75" y1="-3.25" x2="-1.75" y2="3.25" width="0.2" layer="21"/>
+<wire x1="-4" y1="3.1" x2="-2.1" y2="3.1" width="0.2" layer="21"/>
+</package>
+<package name="CAPC3216X180N">
+<description>&lt;b&gt;1206&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.5" y="0" dx="1.8" dy="1.15" layer="1" rot="R90"/>
+<smd name="2" x="1.5" y="0" dx="1.8" dy="1.15" layer="1" rot="R90"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.7" y1="-0.9" x2="1.7" y2="-0.9" width="0.001" layer="51"/>
+<wire x1="1.7" y1="-0.9" x2="1.7" y2="0.9" width="0.001" layer="51"/>
+<wire x1="1.7" y1="0.9" x2="-1.7" y2="0.9" width="0.001" layer="51"/>
+<wire x1="-1.7" y1="0.9" x2="-1.7" y2="-0.9" width="0.001" layer="51"/>
+<wire x1="-2.35" y1="-1.15" x2="2.35" y2="-1.15" width="0.05" layer="51"/>
+<wire x1="2.35" y1="-1.15" x2="2.35" y2="1.15" width="0.05" layer="51"/>
+<wire x1="2.35" y1="1.15" x2="-2.35" y2="1.15" width="0.05" layer="51"/>
+<wire x1="-2.35" y1="1.15" x2="-2.35" y2="-1.15" width="0.05" layer="51"/>
+<circle x="0" y="0" radius="0.35" width="0.05" layer="21"/>
+<wire x1="0" y1="-0.5" x2="0" y2="0.5" width="0.05" layer="51"/>
+<wire x1="-0.5" y1="0" x2="0.5" y2="0" width="0.05" layer="51"/>
+<wire x1="-1.6" y1="-0.8" x2="1.6" y2="-0.8" width="0.1" layer="51"/>
+<wire x1="1.6" y1="-0.8" x2="1.6" y2="0.8" width="0.1" layer="51"/>
+<wire x1="1.6" y1="0.8" x2="-1.6" y2="0.8" width="0.1" layer="51"/>
+<wire x1="-1.6" y1="0.8" x2="-1.6" y2="-0.8" width="0.1" layer="51"/>
+<wire x1="-0.55" y1="-0.8" x2="0.55" y2="-0.8" width="0.2" layer="21"/>
+<wire x1="-0.55" y1="0.8" x2="0.55" y2="0.8" width="0.2" layer="21"/>
+</package>
+<package name="101181920001LF">
+<description>&lt;b&gt;10118192-0001LF&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.3" y="1.682" dx="1.35" dy="0.4" layer="1" rot="R90"/>
+<smd name="2" x="-0.65" y="1.682" dx="1.35" dy="0.4" layer="1" rot="R90"/>
+<smd name="3" x="0" y="1.682" dx="1.35" dy="0.4" layer="1" rot="R90"/>
+<smd name="4" x="0.65" y="1.682" dx="1.35" dy="0.4" layer="1" rot="R90"/>
+<smd name="5" x="1.3" y="1.682" dx="1.35" dy="0.4" layer="1" rot="R90"/>
+<smd name="6" x="-3.1" y="1.557" dx="2.1" dy="1.6" layer="1"/>
+<smd name="7" x="3.1" y="1.557" dx="2.1" dy="1.6" layer="1"/>
+<smd name="8" x="-1.2" y="-0.993" dx="1.9" dy="1.9" layer="1"/>
+<smd name="9" x="1.2" y="-0.993" dx="1.9" dy="1.9" layer="1"/>
+<smd name="10" x="-3.8" y="-0.993" dx="1.9" dy="1.9" layer="1"/>
+<smd name="11" x="3.8" y="-0.993" dx="1.9" dy="1.9" layer="1"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-3.95" y1="1.971" x2="3.95" y2="1.971" width="0.254" layer="51"/>
+<wire x1="3.95" y1="1.971" x2="3.95" y2="-3.079" width="0.254" layer="51"/>
+<wire x1="3.95" y1="-3.079" x2="-3.95" y2="-3.079" width="0.254" layer="51"/>
+<wire x1="-3.95" y1="-3.079" x2="-3.95" y2="1.971" width="0.254" layer="51"/>
+<wire x1="-5.75" y1="4.079" x2="5.75" y2="4.079" width="0.1" layer="51"/>
+<wire x1="5.75" y1="4.079" x2="5.75" y2="-4.079" width="0.1" layer="51"/>
+<wire x1="5.75" y1="-4.079" x2="-5.75" y2="-4.079" width="0.1" layer="51"/>
+<wire x1="-5.75" y1="-4.079" x2="-5.75" y2="4.079" width="0.1" layer="51"/>
+<wire x1="3.95" y1="-3.079" x2="-3.95" y2="-3.079" width="0.254" layer="21"/>
+<wire x1="-3.95" y1="-3.079" x2="-3.95" y2="-2.293" width="0.254" layer="21"/>
+<wire x1="3.95" y1="-3.079" x2="3.95" y2="-2.293" width="0.254" layer="21"/>
+<wire x1="-1.4" y1="3.066" x2="-1.4" y2="3.066" width="0.2" layer="21"/>
+<wire x1="-1.4" y1="3.066" x2="-1.2" y2="3.066" width="0.2" layer="21" curve="180"/>
+<wire x1="-1.2" y1="3.066" x2="-1.2" y2="3.066" width="0.2" layer="21"/>
+<wire x1="-1.2" y1="3.066" x2="-1.4" y2="3.066" width="0.2" layer="21" curve="180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LPPB052CFFN-RC">
@@ -180,6 +285,71 @@
 <pin name="8" x="10.16" y="-2.54" length="middle" direction="pas" rot="R180"/>
 <pin name="9" x="-10.16" y="-5.08" length="middle" direction="pas"/>
 <pin name="10" x="10.16" y="-5.08" length="middle" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="ESP12">
+<pin name="GND" x="7.62" y="-10.16" length="middle" rot="R180"/>
+<pin name="GPIO15" x="7.62" y="-7.62" length="middle" rot="R180"/>
+<pin name="GPIO2" x="7.62" y="-5.08" length="middle" rot="R180"/>
+<pin name="GPIO0" x="7.62" y="-2.54" length="middle" rot="R180"/>
+<pin name="GPIO5" x="7.62" y="0" length="middle" rot="R180"/>
+<pin name="GPIO4" x="7.62" y="2.54" length="middle" rot="R180"/>
+<pin name="RXD" x="7.62" y="5.08" length="middle" rot="R180"/>
+<pin name="TXD" x="7.62" y="7.62" length="middle" rot="R180"/>
+<pin name="REST" x="-22.86" y="7.62" length="middle"/>
+<pin name="ADC" x="-22.86" y="5.08" length="middle"/>
+<pin name="CH_PD" x="-22.86" y="2.54" length="middle"/>
+<pin name="GPIO16" x="-22.86" y="0" length="middle"/>
+<pin name="GPIO14" x="-22.86" y="-2.54" length="middle"/>
+<pin name="GPIO12" x="-22.86" y="-5.08" length="middle"/>
+<pin name="GPIO13" x="-22.86" y="-7.62" length="middle"/>
+<pin name="VCC" x="-22.86" y="-10.16" length="middle"/>
+<wire x1="-17.78" y1="-12.7" x2="2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-12.7" x2="2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="-17.78" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="10.16" x2="-17.78" y2="-12.7" width="0.254" layer="94"/>
+<text x="-17.78" y="-17.78" size="1.27" layer="94">ESP8266_ESP-12</text>
+<text x="-17.78" y="-15.24" size="1.27" layer="94">&gt;NAME</text>
+</symbol>
+<symbol name="AP2114H-3.3TRG1">
+<wire x1="5.08" y1="2.54" x2="27.94" y2="2.54" width="0.254" layer="94"/>
+<wire x1="27.94" y1="-7.62" x2="27.94" y2="2.54" width="0.254" layer="94"/>
+<wire x1="27.94" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<text x="29.21" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="29.21" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="GND" x="0" y="0" length="middle"/>
+<pin name="VOUT_1" x="0" y="-2.54" length="middle"/>
+<pin name="VIN" x="0" y="-5.08" length="middle"/>
+<pin name="VOUT_2" x="33.02" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="JMK316ABJ107ML-T">
+<wire x1="5.588" y1="2.54" x2="5.588" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.112" y1="2.54" x2="7.112" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.588" y2="0" width="0.254" layer="94"/>
+<wire x1="7.112" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
+<text x="8.89" y="6.35" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="8.89" y="3.81" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="0" y="0" visible="pad" length="middle"/>
+<pin name="2" x="12.7" y="0" visible="pad" length="middle" rot="R180"/>
+</symbol>
+<symbol name="10118192-0001LF">
+<wire x1="5.08" y1="2.54" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-15.24" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-15.24" x2="5.08" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-15.24" width="0.254" layer="94"/>
+<text x="19.05" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="19.05" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="0" y="0" length="middle"/>
+<pin name="2" x="0" y="-2.54" length="middle"/>
+<pin name="3" x="0" y="-5.08" length="middle"/>
+<pin name="4" x="0" y="-7.62" length="middle"/>
+<pin name="5" x="0" y="-10.16" length="middle"/>
+<pin name="6" x="0" y="-12.7" length="middle"/>
+<pin name="7" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="8" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="9" x="22.86" y="-5.08" length="middle" rot="R180"/>
+<pin name="10" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="11" x="22.86" y="-10.16" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -242,6 +412,122 @@
 <attribute name="MF" value="Amphenol ICC"/>
 <attribute name="MP" value="20021321-00010C4LF"/>
 <attribute name="PACKAGE" value="None"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ESP8266_ESP-12">
+<gates>
+<gate name="G$1" symbol="ESP12" x="5.08" y="0"/>
+</gates>
+<devices>
+<device name="" package="ESP8266-ESP12">
+<connects>
+<connect gate="G$1" pin="ADC" pad="10"/>
+<connect gate="G$1" pin="CH_PD" pad="11"/>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="GPIO0" pad="4"/>
+<connect gate="G$1" pin="GPIO12" pad="14"/>
+<connect gate="G$1" pin="GPIO13" pad="15"/>
+<connect gate="G$1" pin="GPIO14" pad="13"/>
+<connect gate="G$1" pin="GPIO15" pad="2"/>
+<connect gate="G$1" pin="GPIO16" pad="12"/>
+<connect gate="G$1" pin="GPIO2" pad="3"/>
+<connect gate="G$1" pin="GPIO4" pad="6"/>
+<connect gate="G$1" pin="GPIO5" pad="5"/>
+<connect gate="G$1" pin="REST" pad="9"/>
+<connect gate="G$1" pin="RXD" pad="7"/>
+<connect gate="G$1" pin="TXD" pad="8"/>
+<connect gate="G$1" pin="VCC" pad="16"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AP2114H-3.3TRG1" prefix="IC">
+<description>&lt;b&gt;1A 3.3V Low Noise LDO Regulator SOT223 DiodesZetex AP2114H-3.3TRG1, LDO Voltage Regulator, 1 (Min)A, 3.3 V +/-1.5%, 2.5  6 Vin, 3-Pin SOT-223&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href=""&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="AP2114H-3.3TRG1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT230P700X180-4N">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="3"/>
+<connect gate="G$1" pin="VOUT_1" pad="2"/>
+<connect gate="G$1" pin="VOUT_2" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="1A 3.3V Low Noise LDO Regulator SOT223 DiodesZetex AP2114H-3.3TRG1, LDO Voltage Regulator, 1 (Min)A, 3.3 V +/-1.5%, 2.5  6 Vin, 3-Pin SOT-223" constant="no"/>
+<attribute name="HEIGHT" value="1.8mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Diodes Inc." constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="AP2114H-3.3TRG1" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="621-AP2114H-3.3TRG1" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP2114H-33TRG1?qs=x6A8l6qLYDDSG%2FfwzcsOhw%3D%3D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JMK316ABJ107ML-T" prefix="C">
+<description>&lt;b&gt;Multilayer Ceramic Capacitors MLCC - SMD/SMT 100uF 6.3Volts X5R +/-20% 1206 HI CV&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/JMK316ABJ107ML-T.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="JMK316ABJ107ML-T" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CAPC3216X180N">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 100uF 6.3Volts X5R +/-20% 1206 HI CV" constant="no"/>
+<attribute name="HEIGHT" value="1.8mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="TAIYO YUDEN" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="JMK316ABJ107ML-T" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="963-JMK316ABJ107ML-T" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=963-JMK316ABJ107ML-T" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="10118192-0001LF" prefix="J">
+<description>&lt;b&gt;USB Connectors 5P MICRO USB TYPE B RECEPTACLE&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://www.mouser.tw/datasheet/2/18/10118192-1361887.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="10118192-0001LF" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="101181920001LF">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="USB Connectors 5P MICRO USB TYPE B RECEPTACLE" constant="no"/>
+<attribute name="HEIGHT" value="2.8mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Amphenol" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="10118192-0001LF" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="649-10118192-0001LF" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/10118192-0001LF?qs=Ywefl8B65e5bHFoQtIudZg%3D%3D" constant="no"/>
 </technology>
 </technologies>
 </device>
