@@ -212,6 +212,9 @@
 <text x="4.37" y="43.939" size="0.762" layer="25" font="vector" ratio="20" rot="SR270" align="center-left">C</text>
 <text x="6.91" y="43.939" size="0.762" layer="25" font="vector" ratio="20" rot="SR270" align="center-left">GND</text>
 <text x="9.45" y="43.939" size="0.762" layer="25" font="vector" ratio="20" rot="SR270" align="center-left">5V</text>
+<wire x1="10.795" y1="47.625" x2="10.795" y2="43.815" width="0.1524" layer="21"/>
+<text x="29.21" y="36.83" size="1.778" layer="21" font="vector" ratio="20" align="bottom-center">UW CEE</text>
+<text x="3.81" y="29.21" size="1.778" layer="21" font="vector" ratio="20" align="bottom-center">rev 1</text>
 </plain>
 <libraries>
 <library name="aqm-parts">
