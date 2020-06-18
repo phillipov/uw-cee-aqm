@@ -26,6 +26,7 @@ WiFiClient wifi;
 WiFiManager wifiManager;
 PubSubClient mqtt(wifi);
 
+char sensorID[18];
 DynamicJsonDocument jsonDoc(MAX_PAYLOAD);
 
 bool mqtt_on = false;
@@ -56,6 +57,8 @@ void collect()
 
 void report()
 {
+  jsonDoc["sensor_id"] = sensorID;
+  
   if(mqtt_on)
   {
     char payload[MAX_PAYLOAD];
@@ -76,6 +79,10 @@ void setupGlobal()
   Serial.println();
   Wire.begin(4, 5);
 
+  // set sensor ID to MAC address
+  WiFi.macAddress().toCharArray(sensorID, 18);
+  Serial.println(sensorID);
+  
   WiFi.mode(WIFI_STA);
   wifiManager.setDebugOutput(false);
   wifiManager.autoConnect("AQM-AutoConnect");
@@ -90,7 +97,7 @@ void setupMQTT()
   while(!mqtt.connected())
   {
     delay(200);
-    mqtt.connect("sensor0", MqttSecrets::username, MqttSecrets::password);
+    mqtt.connect(sensorID, MqttSecrets::username, MqttSecrets::password);
     if(mqtt.state() == 0)
     {
       mqtt_on = true;
@@ -180,7 +187,7 @@ void recordBME()
 {
   if(!bme_on)
     return;
-
+  
   float temp = bme.readTemperature();
   float hum = bme.readHumidity();
   
