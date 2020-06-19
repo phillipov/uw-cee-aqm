@@ -6,7 +6,7 @@ __pycache__/
 
 # secrets
 secrets.py
-mqtt-secrets.h
+server-secrets.h
 
 # sqlite3 ignores
 *.db
