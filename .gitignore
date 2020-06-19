@@ -1,3 +1,6 @@
+# arduino ignores
+*.bin
+
 # python ignores
 __pycache__/
 

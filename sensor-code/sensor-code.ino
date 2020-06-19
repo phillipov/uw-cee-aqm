@@ -3,8 +3,9 @@
 #include <WiFiManager.h>
 #include <PubSubClient.h>
 #include <NTPClient.h>
+#include <ESP8266httpUpdate.h>
 #include <ArduinoJson.h>
-#include "mqtt-secrets.h"
+#include "server-secrets.h"
 
 // hardware
 #include <Wire.h>
@@ -15,6 +16,7 @@
 #include <Adafruit_BME280.h>
 #include <RTClib.h>
 
+static const char* VERSION = "0.0.1";
 static const int MAX_PAYLOAD = 2048;
 
 SoftwareSerial pmsSerial(13, 15, false);
@@ -37,14 +39,20 @@ bool rtc_on = false;
 void setup() {
   setupGlobal();
   setupMQTT();
+  setupOTA();
   setupPMS();
   setupBME();
   setupRTC();
+  Serial.println("Setup complete.");
+  Serial.println();
 }
 
 void loop() {
   collect();
   report();
+
+  if(mqtt_on)
+    mqtt.loop();
   delay(5000);
 }
 
@@ -73,6 +81,16 @@ void report()
   jsonDoc.clear();
 }
 
+void otaCallback(char* topic, byte* payload, unsigned int length)
+{
+  // do not update if version is same
+  if(memcmp(payload, VERSION, max(length, strlen(VERSION))) == 0)
+    return;
+  
+  Serial.println("UPDATE RECIEVED. Updating...");
+  ESPhttpUpdate.update(ServerSecrets::otaHost, ServerSecrets::otaPort, "/update.bin");
+}
+
 void setupGlobal()
 {
   Serial.begin(9600);
@@ -81,7 +99,9 @@ void setupGlobal()
 
   // set sensor ID to MAC address
   WiFi.macAddress().toCharArray(sensorID, 18);
-  Serial.println(sensorID);
+  Serial.print(sensorID);
+  Serial.print(" with version ");
+  Serial.println(VERSION);
   
   WiFi.mode(WIFI_STA);
   wifiManager.setDebugOutput(false);
@@ -91,13 +111,12 @@ void setupGlobal()
 void setupMQTT()
 {
   mqtt.setBufferSize(MAX_PAYLOAD);
-  mqtt.setServer(MqttSecrets::host, MqttSecrets::port);
+  mqtt.setServer(ServerSecrets::mqttHost, ServerSecrets::mqttPort);
   Serial.println("Connecting to MQTT broker...");
   
   while(!mqtt.connected())
   {
-    delay(200);
-    mqtt.connect(sensorID, MqttSecrets::username, MqttSecrets::password);
+    mqtt.connect(sensorID, ServerSecrets::mqttUser, ServerSecrets::mqttPassw);
     if(mqtt.state() == 0)
     {
       mqtt_on = true;
@@ -111,8 +130,20 @@ void setupMQTT()
       Serial.println(mqtt.state());
       break;
     }
-    yield();
+    delay(200);
   }
+}
+
+void setupOTA()
+{
+  if(!mqtt_on)
+    return;
+
+  Serial.println("Setting up OTA updates...");
+  mqtt.setCallback(otaCallback);
+  while(!mqtt.subscribe("sensors/update"))
+    delay(100);
+  Serial.println("OTA updates setup.");
 }
 
 void setupPMS()
