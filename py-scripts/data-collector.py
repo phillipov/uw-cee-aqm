@@ -35,7 +35,6 @@ def on_message(client, db_conn, msg):
 # mqtt subscription callback: data received from sensor
 def data_receive(client, db_conn, msg):
     jsonMsg = json.loads(msg.payload)
-    print(jsonMsg)
     
     record = (  jsonMsg.get("sensor_id"),
                 jsonMsg.get("time"),
@@ -50,7 +49,8 @@ def data_receive(client, db_conn, msg):
         with db_conn:
             db_conn.execute(sql_insert_data, record)
     except sqlite3.Error:
-        print("sqlite error occurred.")
+        print("sqlite error occurred. error with data:")
+        print(jsonMsg)
 
 # sqlite database setup
 db_conn = sqlite3.connect("sensor-data.db")
