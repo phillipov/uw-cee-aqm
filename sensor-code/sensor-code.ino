@@ -16,7 +16,7 @@
 #include <Adafruit_BME280.h>
 #include <RTClib.h>
 
-static const char* VERSION = "0.0.1";
+static const char* VERSION = "0.0.2";
 static const int MAX_PAYLOAD = 2048;
 
 SoftwareSerial pmsSerial(13, 15, false);
@@ -31,7 +31,6 @@ PubSubClient mqtt(wifi);
 char sensorID[18];
 DynamicJsonDocument jsonDoc(MAX_PAYLOAD);
 
-bool mqtt_on = false;
 bool pms_on = false;
 bool bme_on = false;
 bool rtc_on = false;
@@ -51,9 +50,10 @@ void loop() {
   collect();
   report();
 
-  if(mqtt_on)
-    mqtt.loop();
-  delay(5000);
+  if(!mqtt.loop()) // maintains MQTT stuff
+    mqttReconnect();
+  
+  delay(30000);
 }
 
 void collect()
@@ -66,18 +66,12 @@ void collect()
 void report()
 {
   jsonDoc["sensor_id"] = sensorID;
+  char payload[MAX_PAYLOAD];
+  serializeJson(jsonDoc, payload);
   
-  if(mqtt_on)
-  {
-    char payload[MAX_PAYLOAD];
-    serializeJson(jsonDoc, payload);
-    
-    mqtt.publish("sensors/data", payload);
-  }
-  else
-  {
-    serializeJsonPretty(jsonDoc, Serial);
-  }
+  while(!mqtt.publish("sensors/data", payload, false))
+    mqttReconnect();
+  
   jsonDoc.clear();
 }
 
@@ -87,8 +81,23 @@ void otaCallback(char* topic, byte* payload, unsigned int length)
   if(memcmp(payload, VERSION, max(length, strlen(VERSION))) == 0)
     return;
   
-  Serial.println("UPDATE RECIEVED. Updating...");
-  ESPhttpUpdate.update(ServerSecrets::otaHost, ServerSecrets::otaPort, "/update.bin");
+  Serial.println("New firmware version found. Updating...");
+  
+  t_httpUpdate_return result;
+  for(int i = 0; i < 3; i++)
+  {
+    result = ESPhttpUpdate.update(  ServerSecrets::otaHost,
+                                    ServerSecrets::otaPort,
+                                    "/update.bin");
+    
+    if(result != HTTP_UPDATE_FAILED)
+      break;
+  }
+  
+  if(result == HTTP_UPDATE_FAILED)
+    Serial.println("Update failed");
+  else if(result == HTTP_UPDATE_NO_UPDATES)
+    Serial.println("Server reported no updates available");
 }
 
 void setupGlobal()
@@ -112,37 +121,37 @@ void setupMQTT()
 {
   mqtt.setBufferSize(MAX_PAYLOAD);
   mqtt.setServer(ServerSecrets::mqttHost, ServerSecrets::mqttPort);
-  Serial.println("Connecting to MQTT broker...");
   
+  Serial.println("Connecting to MQTT broker...");
+  mqttReconnect();
+  Serial.println("MQTT broker connected.");
+}
+
+void mqttReconnect()
+{
   while(!mqtt.connected())
   {
     mqtt.connect(sensorID, ServerSecrets::mqttUser, ServerSecrets::mqttPassw);
+    
     if(mqtt.state() == 0)
-    {
-      mqtt_on = true;
-      Serial.println("MQTT broker connected.");
       break;
-    }
     else if(mqtt.state() > 0) // good connection, server refused
-    {
-      mqtt_on = false;
-      Serial.print("MQTT broker connection failed, rc=");
-      Serial.println(mqtt.state());
-      break;
-    }
+      delay(30000); // wait 30 seconds before retrying
+    // loop again if code < 0
+    
     delay(200);
   }
+  yield();
 }
 
 void setupOTA()
 {
-  if(!mqtt_on)
-    return;
-
   Serial.println("Setting up OTA updates...");
   mqtt.setCallback(otaCallback);
+  
   while(!mqtt.subscribe("sensors/update"))
-    delay(100);
+    mqttReconnect();
+  
   Serial.println("OTA updates setup.");
 }
 
