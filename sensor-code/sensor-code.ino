@@ -71,7 +71,6 @@ void report()
   
   while(!mqtt.publish("sensors/data", payload, false))
     mqttReconnect();
-  
   jsonDoc.clear();
 }
 

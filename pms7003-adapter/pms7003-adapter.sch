@@ -524,7 +524,6 @@
 <text x="-9.652" y="-8.255" size="1.016" layer="21" font="vector" ratio="20" rot="R270" align="bottom-center">5V</text>
 <text x="0.635" y="-13.335" size="1.016" layer="21" font="vector" ratio="20" align="center">USB</text>
 <text x="10.16" y="-13.335" size="1.016" layer="21" font="vector" ratio="20" align="center-right">RESET</text>
-<text x="0" y="0" size="1.016" layer="21" font="vector" ratio="20" align="center">D1 mini</text>
 <text x="9.652" y="6.985" size="1.016" layer="21" font="vector" ratio="20" rot="R90" align="bottom-center">A0</text>
 <text x="9.652" y="4.445" size="1.016" layer="21" font="vector" ratio="20" rot="R90" align="bottom-center">D0</text>
 <text x="9.652" y="1.905" size="1.016" layer="21" font="vector" ratio="20" rot="R90" align="bottom-center">D5</text>
@@ -540,29 +539,26 @@
 <text x="-9.652" y="-5.715" size="1.016" layer="21" font="vector" ratio="20" rot="R270" align="bottom-center">GND</text>
 <text x="0" y="13.97" size="1.016" layer="51" font="vector" ratio="20" align="center">ANTENNA</text>
 </package>
-<package name="SQT-105-01-XX-S">
-<description>&lt;b&gt;SQT-105-01-XX-S&lt;/b&gt;&lt;br&gt;
+<package name="SQT-107-01-XX-S">
+<description>&lt;b&gt;SQT-107-01-XX-S&lt;/b&gt;&lt;br&gt;
 </description>
 <pad name="1" x="0" y="0" drill="0.99" diameter="1.5"/>
 <pad name="2" x="2" y="0" drill="0.99" diameter="1.5"/>
 <pad name="3" x="4" y="0" drill="0.99" diameter="1.5"/>
 <pad name="4" x="6" y="0" drill="0.99" diameter="1.5"/>
 <pad name="5" x="8" y="0" drill="0.99" diameter="1.5"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-1.15" y1="1" x2="9.15" y2="1" width="0.2" layer="51"/>
-<wire x1="9.15" y1="1" x2="9.15" y2="-1" width="0.2" layer="51"/>
-<wire x1="9.15" y1="-1" x2="-1.15" y2="-1" width="0.2" layer="51"/>
+<pad name="6" x="10" y="0" drill="0.99" diameter="1.5"/>
+<pad name="7" x="12" y="0" drill="0.99" diameter="1.5"/>
+<text x="0" y="2.54" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.15" y1="1" x2="13.15" y2="1" width="0.2" layer="51"/>
+<wire x1="13.15" y1="1" x2="13.15" y2="-1" width="0.2" layer="51"/>
+<wire x1="13.15" y1="-1" x2="-1.15" y2="-1" width="0.2" layer="51"/>
 <wire x1="-1.15" y1="-1" x2="-1.15" y2="1" width="0.2" layer="51"/>
-<wire x1="-1.15" y1="1" x2="9.15" y2="1" width="0.1" layer="21"/>
-<wire x1="9.15" y1="1" x2="9.15" y2="-1" width="0.1" layer="21"/>
-<wire x1="9.15" y1="-1" x2="-1.15" y2="-1" width="0.1" layer="21"/>
+<wire x1="-1.15" y1="1" x2="13.15" y2="1" width="0.1" layer="21"/>
+<wire x1="13.15" y1="1" x2="13.15" y2="-1" width="0.1" layer="21"/>
+<wire x1="13.15" y1="-1" x2="-1.15" y2="-1" width="0.1" layer="21"/>
 <wire x1="-1.15" y1="-1" x2="-1.15" y2="1" width="0.1" layer="21"/>
-<circle x="0.05" y="-1.5" radius="0.05" width="0.2" layer="25"/>
-<wire x1="-2.35" y1="2.2" x2="10.35" y2="2.2" width="0.05" layer="51"/>
-<wire x1="10.35" y1="2.2" x2="10.35" y2="-2.6" width="0.05" layer="51"/>
-<wire x1="10.35" y1="-2.6" x2="-2.35" y2="-2.6" width="0.05" layer="51"/>
-<wire x1="-2.35" y1="-2.6" x2="-2.35" y2="2.2" width="0.05" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -647,11 +643,11 @@ ESP8266 module</description>
 <text x="-10.16" y="12.7" size="1.778" layer="95">&gt;Name</text>
 <text x="-7.62" y="-15.24" size="1.778" layer="96">&gt;Value</text>
 </symbol>
-<symbol name="SQT-105-01-F-S">
+<symbol name="SQT-107-01-F-S">
 <wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-12.7" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-12.7" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-17.78" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-17.78" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
 <text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
 <text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
 <pin name="1" x="0" y="0" length="middle"/>
@@ -659,6 +655,8 @@ ESP8266 module</description>
 <pin name="3" x="0" y="-5.08" length="middle"/>
 <pin name="4" x="0" y="-7.62" length="middle"/>
 <pin name="5" x="0" y="-10.16" length="middle"/>
+<pin name="6" x="0" y="-12.7" length="middle"/>
+<pin name="7" x="0" y="-15.24" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -758,29 +756,31 @@ ESP8266 module</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SQT-105-01-F-S" prefix="J">
-<description>&lt;b&gt;5 Position,Cost Effective Rugged PCB Sockets, 2.00mm pitch&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/SQT-105-01-F-S.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<deviceset name="SQT-107-01-F-S" prefix="J">
+<description>&lt;b&gt;7 Position,Cost Effective Rugged PCB Sockets, 2.00mm pitch&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://suddendocs.samtec.com/prints/sqt-1xx-xx-xxx-x-xxx-xxx-mkt.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
-<gate name="G$1" symbol="SQT-105-01-F-S" x="0" y="0"/>
+<gate name="G$1" symbol="SQT-107-01-F-S" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SQT-105-01-XX-S">
+<device name="" package="SQT-107-01-XX-S">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
 <connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DESCRIPTION" value="5 Position,Cost Effective Rugged PCB Sockets, 2.00mm pitch" constant="no"/>
+<attribute name="DESCRIPTION" value="7 Position,Cost Effective Rugged PCB Sockets, 2.00mm pitch" constant="no"/>
 <attribute name="HEIGHT" value="6.35mm" constant="no"/>
 <attribute name="MANUFACTURER_NAME" value="SAMTEC" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="SQT-105-01-F-S" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="200-SQT10501FS" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=200-SQT10501FS" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="SQT-107-01-F-S" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="200-SQT10701FS" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Samtec/SQT-107-01-F-S?qs=rU5fayqh%252BE1jj%2FtMUPHkTQ%3D%3D" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1650,7 +1650,10 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="J4" library="aqm-parts" deviceset="SQT-105-01-F-S" device=""/>
+<part name="J4" library="aqm-parts" deviceset="SQT-107-01-F-S" device=""/>
+<part name="J5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2"/>
+<part name="SUPPLY5" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
+<part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1720,15 +1723,15 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <instance part="GND11" gate="1" x="40.64" y="10.16" smashed="yes">
 <attribute name="VALUE" x="40.64" y="9.906" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="U1" gate="D1" x="114.3" y="55.88" smashed="yes">
-<attribute name="NAME" x="104.14" y="71.12" size="1.778" layer="95"/>
-<attribute name="VALUE" x="101.6" y="78.74" size="1.778" layer="96"/>
+<instance part="U1" gate="D1" x="88.9" y="60.96" smashed="yes">
+<attribute name="NAME" x="78.74" y="76.2" size="1.778" layer="95"/>
+<attribute name="VALUE" x="76.2" y="83.82" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY2" gate="G$1" x="147.32" y="50.8" smashed="yes">
-<attribute name="VALUE" x="147.32" y="53.594" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY2" gate="G$1" x="121.92" y="55.88" smashed="yes">
+<attribute name="VALUE" x="121.92" y="58.674" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND1" gate="1" x="137.16" y="40.64" smashed="yes">
-<attribute name="VALUE" x="137.16" y="40.386" size="1.778" layer="96" align="top-center"/>
+<instance part="GND1" gate="1" x="111.76" y="45.72" smashed="yes">
+<attribute name="VALUE" x="111.76" y="45.466" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="-93.98" y="71.12" smashed="yes">
 <attribute name="VALUE" x="-93.98" y="73.914" size="1.778" layer="96" align="bottom-center"/>
@@ -1737,8 +1740,18 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <attribute name="VALUE" x="-93.98" y="60.706" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="J4" gate="G$1" x="-68.58" y="68.58" smashed="yes">
-<attribute name="NAME" x="-64.77" y="76.2" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="-64.77" y="73.66" size="1.778" layer="96" align="center-left"/>
+<attribute name="NAME" x="-67.31" y="76.2" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-67.31" y="73.66" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="J5" gate="A" x="-73.66" y="15.24" smashed="yes">
+<attribute name="NAME" x="-80.01" y="23.495" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-80.01" y="5.08" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY5" gate="G$1" x="-91.44" y="22.86" smashed="yes">
+<attribute name="VALUE" x="-91.44" y="25.654" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="GND6" gate="1" x="-91.44" y="5.08" smashed="yes">
+<attribute name="VALUE" x="-91.44" y="4.826" size="1.778" layer="96" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -1751,9 +1764,9 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pinref part="J1" gate="G$1" pin="8"/>
 </segment>
 <segment>
-<pinref part="U1" gate="D1" pin="D8"/>
-<wire x1="99.06" y1="50.8" x2="88.9" y2="50.8" width="0.1524" layer="91"/>
-<label x="88.9" y="50.8" size="1.778" layer="95" rot="MR0"/>
+<pinref part="U1" gate="D1" pin="D7"/>
+<wire x1="73.66" y1="58.42" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
+<label x="68.58" y="58.42" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="PM_TX" class="0">
@@ -1763,9 +1776,9 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pinref part="J1" gate="G$1" pin="10"/>
 </segment>
 <segment>
-<pinref part="U1" gate="D1" pin="D7"/>
-<wire x1="99.06" y1="53.34" x2="88.9" y2="53.34" width="0.1524" layer="91"/>
-<label x="88.9" y="53.34" size="1.778" layer="95" rot="MR0"/>
+<pinref part="U1" gate="D1" pin="D6"/>
+<wire x1="73.66" y1="60.96" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
+<label x="68.58" y="60.96" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1811,15 +1824,21 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 </segment>
 <segment>
 <pinref part="U1" gate="D1" pin="GND"/>
-<wire x1="132.08" y1="50.8" x2="137.16" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="137.16" y1="50.8" x2="137.16" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="55.88" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="-93.98" y1="63.5" x2="-93.98" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-93.98" y1="66.04" x2="-68.58" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="J5" gate="A" pin="2"/>
+<wire x1="-76.2" y1="17.78" x2="-91.44" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="-91.44" y1="17.78" x2="-91.44" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -1863,15 +1882,21 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 </segment>
 <segment>
 <pinref part="U1" gate="D1" pin="5V"/>
-<wire x1="132.08" y1="48.26" x2="147.32" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="53.34" x2="121.92" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="5V"/>
-<wire x1="147.32" y1="48.26" x2="147.32" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="53.34" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY1" gate="G$1" pin="5V"/>
 <wire x1="-93.98" y1="71.12" x2="-93.98" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="68.58" x2="-93.98" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="J5" gate="A" pin="1"/>
+<wire x1="-76.2" y1="20.32" x2="-91.44" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="G$1" pin="5V"/>
+<wire x1="-91.44" y1="20.32" x2="-91.44" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -1892,8 +1917,13 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 </segment>
 <segment>
 <pinref part="U1" gate="D1" pin="D2"/>
-<wire x1="132.08" y1="58.42" x2="139.7" y2="58.42" width="0.1524" layer="91"/>
-<label x="139.7" y="58.42" size="1.778" layer="95"/>
+<wire x1="106.68" y1="63.5" x2="114.3" y2="63.5" width="0.1524" layer="91"/>
+<label x="114.3" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="A" pin="4"/>
+<wire x1="-76.2" y1="12.7" x2="-83.82" y2="12.7" width="0.1524" layer="91"/>
+<label x="-83.82" y="12.7" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -1914,8 +1944,13 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 </segment>
 <segment>
 <pinref part="U1" gate="D1" pin="D1"/>
-<wire x1="132.08" y1="60.96" x2="139.7" y2="60.96" width="0.1524" layer="91"/>
-<label x="139.7" y="60.96" size="1.778" layer="95"/>
+<wire x1="106.68" y1="66.04" x2="114.3" y2="66.04" width="0.1524" layer="91"/>
+<label x="114.3" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="A" pin="3"/>
+<wire x1="-76.2" y1="15.24" x2="-83.82" y2="15.24" width="0.1524" layer="91"/>
+<label x="-83.82" y="15.24" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="CO2_TX" class="0">
@@ -1925,9 +1960,9 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pinref part="J4" gate="G$1" pin="3"/>
 </segment>
 <segment>
-<pinref part="U1" gate="D1" pin="D6"/>
-<wire x1="99.06" y1="55.88" x2="88.9" y2="55.88" width="0.1524" layer="91"/>
-<label x="88.9" y="55.88" size="1.778" layer="95" rot="MR0"/>
+<pinref part="U1" gate="D1" pin="D5"/>
+<wire x1="73.66" y1="63.5" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
+<label x="68.58" y="63.5" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="CO2_RX" class="0">
@@ -1937,16 +1972,19 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pinref part="J4" gate="G$1" pin="4"/>
 </segment>
 <segment>
-<pinref part="U1" gate="D1" pin="D5"/>
-<wire x1="99.06" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
-<label x="88.9" y="58.42" size="1.778" layer="95" rot="MR0"/>
+<pinref part="U1" gate="D1" pin="D0"/>
+<wire x1="73.66" y1="66.04" x2="68.58" y2="66.04" width="0.1524" layer="91"/>
+<label x="68.58" y="66.04" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="113,1,84.0571,15.4661,J2,,,,,"/>
+<approved hash="113,1,78.9771,18.0061,J2,,,,,"/>
+<approved hash="113,1,-32.7829,16.7361,J3,,,,,"/>
+<approved hash="113,1,90.17,63.4467,U1,,,,,"/>
+<approved hash="113,1,-75.9629,16.7361,J5,,,,,"/>
 </errors>
 </schematic>
 </drawing>
