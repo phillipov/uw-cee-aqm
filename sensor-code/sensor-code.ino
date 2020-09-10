@@ -16,10 +16,18 @@
 #include <Adafruit_BME280.h>
 #include <RTClib.h>
 
-static const char* VERSION = "0.0.2";
+static const char* HARDWARE_VERSION = "0.0.2";
+static const char* SOFTWARE_VERSION = "0.0.3";
 static const int MAX_PAYLOAD = 2048;
 
-SoftwareSerial pmsSerial(13, 15, false);
+static const int PIN_SDA = 4;
+static const int PIN_SCL = 5;
+static const int PIN_PM_RX = 12;
+static const int PIN_PM_TX = 13;
+
+static const int LOOP_DELAY = 30000;
+
+SoftwareSerial pmsSerial(PIN_PM_RX, PIN_PM_TX, false);
 Plantower_PMS7003 pms;
 Adafruit_BME280 bme;
 RTC_DS3231 rtc;
@@ -53,7 +61,7 @@ void loop() {
   if(!mqtt.loop()) // maintains MQTT stuff
     mqttReconnect();
   
-  delay(30000);
+  delay(LOOP_DELAY);
 }
 
 void collect()
@@ -76,9 +84,23 @@ void report()
 
 void otaCallback(char* topic, byte* payload, unsigned int length)
 {
-  // do not update if version is same
-  if(memcmp(payload, VERSION, max(length, strlen(VERSION))) == 0)
+  StaticJsonDocument<MAX_PAYLOAD> payload_doc;
+  deserializeJson(payload_doc, payload, length);
+
+  const char* remote_hw_v = payload_doc["hw"];
+  const char* remote_sw_v = payload_doc["sw"];
+
+  // do not update if hardware version is different
+  if(!(memcmp(remote_hw_v, HARDWARE_VERSION, max(length, strlen(HARDWARE_VERSION))) == 0))
+  {
     return;
+  }
+  
+  // do not update if software version is same
+  if(memcmp(remote_sw_v, SOFTWARE_VERSION, max(length, strlen(SOFTWARE_VERSION))) == 0)
+  {
+    return;
+  }
   
   Serial.println("New firmware version found. Updating...");
   
@@ -103,13 +125,15 @@ void setupGlobal()
 {
   Serial.begin(9600);
   Serial.println();
-  Wire.begin(4, 5);
+  Wire.begin(PIN_SDA, PIN_SCL);
 
   // set sensor ID to MAC address
   WiFi.macAddress().toCharArray(sensorID, 18);
   Serial.print(sensorID);
-  Serial.print(" with version ");
-  Serial.println(VERSION);
+  Serial.print(" hardware version ");
+  Serial.print(HARDWARE_VERSION);
+  Serial.print(", software version ");
+  Serial.println(SOFTWARE_VERSION);
   
   WiFi.mode(WIFI_STA);
   wifiManager.setDebugOutput(false);
@@ -156,9 +180,21 @@ void setupOTA()
 
 void setupPMS()
 {
+  Serial.println("Setting up PM sensor...");
   pmsSerial.begin(9600);
   pms.init(&pmsSerial);
   pms_on = true;
+
+  while(true)
+  {
+    pms.updateFrame();
+    
+    if(pms.hasNewData())
+    {
+      break;
+    }
+    yield();
+  }
 }
 
 void setupBME()
@@ -182,7 +218,7 @@ void setupRTC()
     Serial.println("Setting RTC time...");
     
     WiFiUDP ntpUDP;
-    NTPClient timeClient(ntpUDP, "pool.ntp.org");
+    NTPClient timeClient(ntpUDP, "time.nist.gov");
     timeClient.begin();
     
     if(timeClient.update())
